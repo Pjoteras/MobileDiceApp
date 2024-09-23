@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileDiceApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            BackgroundColor="Beige"
+            Spacing="25">
+            <Label
+                Text="Gra w kości. Autor: 00000000" 
+                BackgroundColor="Brown"
+                TextColor="White"
+                FontSize="Title"
+                Padding="10"/>
+
+
+            <Button
+                Text="RZUĆ KOŚĆMI" 
+                BackgroundColor="Chocolate"
+                HorizontalOptions="Center"
+                Clicked="DiceRoll"/>
+            <FlexLayout
+                Direction="Row">
+                <Image
+                    x:Name="Dice0"
+                    FlexLayout.Basis="20%"
+                    Source="k6_0.png" />
+                <Image
+                    x:Name="Dice1"
+                    FlexLayout.Basis="20%"
+                    Source="k6_0.png" />
+                <Image
+                    x:Name="Dice2"
+                    FlexLayout.Basis="20%"
+                    Source="k6_0.png" />
+                <Image
+                    x:Name="Dice3"
+                    FlexLayout.Basis="20%"
+                    Source="k6_0.png" />
+                <Image
+                    x:Name="Dice4"
+                    FlexLayout.Basis="20%"
+                    Source="k6_0.png" />
+            </FlexLayout>
+            
+            <Label
+                x:Name="Label1"
+                Text="Wynik tego losowania" 
+                HorizontalTextAlignment="Center"/>
+
+            <Label
+                x:Name="Label2"
+                Text="Wynik gry: 0" 
+                HorizontalTextAlignment="Center"/>
+
+            <Button
+                Clicked="ResetGame"
+                Text="RESETUJ WYNIK" 
+                BackgroundColor="Chocolate"
+                HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
